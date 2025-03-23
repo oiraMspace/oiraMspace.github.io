@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AC Milan - History & Trophies</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: red;
+            padding: 20px;
+        }
+        .history, .trophies, .legends {
+            background: #111;
+            padding: 20px;
+            margin: 10px auto;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+        }
+        button {
+            background: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: black;
+            color: red;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            background: #222;
+            margin: 5px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        img {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        footer {
+            background: red;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AC Milan</h1>
+        <p>The Rossoneri - One of the most successful clubs in football history</p>
+    </header>
+    
+    <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/AC_Milan_logo.svg" alt="AC Milan Logo">
+    
+    <section class="history">
+        <h2>History</h2>
+        <p>Founded in 1899, AC Milan is one of the most successful football clubs in the world. Based in Milan, Italy, the club has a rich tradition and is known for its attacking football and legendary players.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/San_Siro_Stadium_-_panoramio_%28cropped%29.jpg" alt="San Siro Stadium">
+    </section>
+    
+    <section class="trophies">
+        <h2>Trophy Cabinet</h2>
+        <button onclick="showTrophies()">Show Major Trophies</button>
+        <ul id="trophy-list"></ul>
+    </section>
+    
+    <section class="legends">
+        <h2>Club Legends</h2>
+        <p>Some of the greatest players in football history have played for AC Milan, including Paolo Maldini, Marco van Basten, Kaka, and Franco Baresi.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Paolo_Maldini_March_2018.jpg" alt="Paolo Maldini">
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 AC Milan Fan Page</p>
+    </footer>
+    
+    <script>
+        function showTrophies() {
+            const trophies = [
+                "7x UEFA Champions League",
+                "19x Serie A Titles",
+                "5x Coppa Italia",
+                "7x Supercoppa Italiana",
+                "3x Intercontinental Cup",
+                "1x FIFA Club World Cup"
+            ];
+            
+            let list = document.getElementById("trophy-list");
+            list.innerHTML = "";
+            trophies.forEach(trophy => {
+                let li = document.createElement("li");
+                li.textContent = trophy;
+                list.appendChild(li);
+            });
+        }
+    </script>
+</body>
+</html>
