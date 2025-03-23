@@ -68,7 +68,7 @@
         <p>The Rossoneri - One of the most successful clubs in football history</p>
     </header>
     
-    <img src="https://en.wikipedia.org/wiki/File:Logo_of_AC_Milan.svg" alt="AC Milan Logo">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/AC_Milan_logo.svg" alt="AC Milan Logo">
     
     <section class="history">
         <h2>History</h2>
@@ -78,8 +78,8 @@
     
     <section class="trophies">
         <h2>Trophy Cabinet</h2>
-        <button onclick="showTrophies()">Show Major Trophies</button>
-        <ul id="trophy-list"></ul>
+        <button onclick="toggleTrophies()" id="trophy-button">Show Major Trophies</button>
+        <ul id="trophy-list" style="display: none;"></ul>
     </section>
     
     <section class="legends">
@@ -93,7 +93,7 @@
     </footer>
     
     <script>
-        function showTrophies() {
+        function toggleTrophies() {
             const trophies = [
                 "7x UEFA Champions League",
                 "19x Serie A Titles",
@@ -104,12 +104,21 @@
             ];
             
             let list = document.getElementById("trophy-list");
-            list.innerHTML = "";
-            trophies.forEach(trophy => {
-                let li = document.createElement("li");
-                li.textContent = trophy;
-                list.appendChild(li);
-            });
+            let button = document.getElementById("trophy-button");
+            
+            if (list.style.display === "none") {
+                list.innerHTML = "";
+                trophies.forEach(trophy => {
+                    let li = document.createElement("li");
+                    li.textContent = trophy;
+                    list.appendChild(li);
+                });
+                list.style.display = "block";
+                button.textContent = "Hide Major Trophies";
+            } else {
+                list.style.display = "none";
+                button.textContent = "Show Major Trophies";
+            }
         }
     </script>
 </body>
