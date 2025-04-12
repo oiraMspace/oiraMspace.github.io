@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AC Milan - Trophies</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>AC Milan</h1>
+    <p>The Rossoneri - One of the most successful clubs in football history</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="history.html">History</a>
+    <a href="legends.html">Legends</a>
+  </nav>
+
+  <section class="trophies">
+    <h2>Trophy Cabinet</h2>
+    <button onclick="toggleTrophies()" id="trophy-button">Show Major Trophies</button>
+    <ul id="trophy-list" style="display: none;"></ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 AC Milan Fan Page</p>
+  </footer>
+
+  <script>
+    function toggleTrophies() {
+      const trophies = [
+        "7x UEFA Champions League",
+        "19x Serie A Titles",
+        "5x Coppa Italia",
+        "7x Supercoppa Italiana",
+        "3x Intercontinental Cup",
+        "1x FIFA Club World Cup"
+      ];
+
+      let list = document.getElementById("trophy-list");
+      let button = document.getElementById("trophy-button");
+
+      if (list.style.display === "none") {
+        list.innerHTML = "";
+        trophies.forEach(trophy => {
+          let li = document.createElement("li");
+          li.textContent = trophy;
+          list.appendChild(li);
+        });
+        list.style.display = "block";
+        button.textContent = "Hide Major Trophies";
+      } else {
+        list.style.display = "none";
+        button.textContent = "Show Major Trophies";
+      }
+    }
+  </script>
+</body>
+</html>
