@@ -103,3 +103,41 @@ nav a {
 nav a:hover {
     color: red;
 }
+
+.trophy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+  
+  .trophy-card {
+    background-color: #1a1a1a;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.5);
+    transition: transform 0.3s;
+}
+  
+  .trophy-card:hover {
+    transform: scale(1.05);
+}
+  
+  .trophy-card img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+  
+  .trophy-name {
+    font-weight: bold;
+    margin: 5px 0;
+    color: white;
+}
+  
+  .trophy-count {
+    font-size: 14px;
+    color: #ccc;
+}
+  
