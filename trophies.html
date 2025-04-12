@@ -54,34 +54,5 @@
     <p>&copy; 2025 AC Milan Fan Page</p>
   </footer>
 
-  <script>
-    function toggleTrophies() {
-      const trophies = [
-        "7x UEFA Champions League",
-        "19x Serie A Titles",
-        "5x Coppa Italia",
-        "7x Supercoppa Italiana",
-        "3x Intercontinental Cup",
-        "1x FIFA Club World Cup"
-      ];
-
-      let list = document.getElementById("trophy-list");
-      let button = document.getElementById("trophy-button");
-
-      if (list.style.display === "none") {
-        list.innerHTML = "";
-        trophies.forEach(trophy => {
-          let li = document.createElement("li");
-          li.textContent = trophy;
-          list.appendChild(li);
-        });
-        list.style.display = "block";
-        button.textContent = "Hide Major Trophies";
-      } else {
-        list.style.display = "none";
-        button.textContent = "Show Major Trophies";
-      }
-    }
-  </script>
 </body>
 </html>
