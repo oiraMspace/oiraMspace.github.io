@@ -1,4 +1,3 @@
-
 window.addEventListener('DOMContentLoaded', () => {
     const yearSpan = document.getElementById("year");
     if (yearSpan) {
@@ -8,10 +7,15 @@ window.addEventListener('DOMContentLoaded', () => {
 
 window.onscroll = function() {
     const topBtn = document.getElementById("topBtn");
+
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         topBtn.style.display = "block";
     } else {
         topBtn.style.display = "none";
+    }
+
+    if (document.body.scrollTop + window.innerHeight >= document.body.scrollHeight) {
+        topBtn.style.display = "block";
     }
 };
 

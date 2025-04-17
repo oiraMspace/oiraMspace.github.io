@@ -142,7 +142,7 @@ nav a:hover {
 }
 
 #topBtn {
-    display: none;
+    display: block;
     position: fixed;
     bottom: 20px;
     right: 30px;
@@ -160,7 +160,7 @@ nav a:hover {
 }
 
 #topBtn:hover {
-    background-color: #333;
+    background-color: #555;
     color: red;
 }
 
