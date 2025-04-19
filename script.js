@@ -58,12 +58,13 @@ function fetchACMilanNews() {
             filteredArticles.slice(0, 5).forEach(article => {
                 const li = document.createElement("li");
                 li.innerHTML = `
+                    ${article.image ? `<img src="${article.image}" alt="Thumbnail" class="news-thumbnail">` : ""}
                     <a href="${article.url}" target="_blank"><strong>${article.title}</strong></a>
                     <br><small>${new Date(article.publishedAt).toLocaleString()}</small>
                     <p>${article.description || ""}</p>
                 `;
                 newsList.appendChild(li);
-            });
+            });            
         })
         .catch(error => {
             console.error("Error fetching AC Milan news:", error);
