@@ -28,7 +28,7 @@ function scrollToTop() {
 }
 
 function fetchACMilanNews() {
-    const apiKey = "demo" /// "52fe8720c80113a51b0e1d10f41bafe2";
+    const apiKey = "52fe8720c80113a51b0e1d10f41bafe2"
     const query = "AC Milan";
     const url = `https://gnews.io/api/v4/search?q=${encodeURIComponent(query)}&lang=en&token=${apiKey}`;
 
