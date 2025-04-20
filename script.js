@@ -85,7 +85,7 @@ if (document.location.pathname.includes("fixtures.html")) {
         return res.json();
       })
       .then(data => {
-        fixturesList.innerHTML = ""; // Clear loading message
+        fixturesList.innerHTML = "";
 
         if (data.length === 0) {
           fixturesList.innerHTML = "<li>No upcoming fixtures available.</li>";
