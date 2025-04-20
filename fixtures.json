@@ -1,0 +1,38 @@
+[
+    {
+      "date": "2025-04-27",
+      "home": "Venezia",
+      "away": "AC Milan",
+      "venue": "Stadio Pier Luigi Penzo",
+      "competition": "Serie A"
+    },
+    {
+      "date": "2025-05-05",
+      "home": "Genoa",
+      "away": "AC Milan",
+      "venue": "Stadio Luigi Ferraris",
+      "competition": "Serie A"
+    },
+    {
+      "date": "2025-05-11",
+      "home": "AC Milan",
+      "away": "Bologna",
+      "venue": "San Siro",
+      "competition": "Serie A"
+    },
+    {
+      "date": "2025-05-18",
+      "home": "AS Roma",
+      "away": "AC Milan",
+      "venue": "Stadio Olimpico",
+      "competition": "Serie A"
+    },
+    {
+      "date": "2025-05-25",
+      "home": "AC Milan",
+      "away": "Monza",
+      "venue": "San Siro",
+      "competition": "Serie A"
+    }
+  ]
+  

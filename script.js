@@ -28,7 +28,7 @@ function scrollToTop() {
 }
 
 function fetchACMilanNews() {
-    const apiKey = "52fe8720c80113a51b0e1d10f41bafe2";
+    const apiKey = "demo" /// "52fe8720c80113a51b0e1d10f41bafe2";
     const query = "AC Milan";
     const url = `https://gnews.io/api/v4/search?q=${encodeURIComponent(query)}&lang=en&token=${apiKey}`;
 
@@ -74,3 +74,38 @@ function fetchACMilanNews() {
             }
         });
 }
+
+if (document.location.pathname.includes("fixtures.html")) {
+  document.addEventListener("DOMContentLoaded", () => {
+    const fixturesList = document.getElementById("fixtures-list");
+
+    fetch("fixtures.json")
+      .then(res => {
+        if (!res.ok) throw new Error("Failed to load fixtures.json");
+        return res.json();
+      })
+      .then(data => {
+        fixturesList.innerHTML = ""; // Clear loading message
+
+        if (data.length === 0) {
+          fixturesList.innerHTML = "<li>No upcoming fixtures available.</li>";
+          return;
+        }
+
+        data.forEach(match => {
+          const li = document.createElement("li");
+          li.innerHTML = `
+            <strong>${match.home} vs ${match.away}</strong><br>
+            <span>${match.date}</span><br>
+            <span>${match.venue}</span>
+          `;
+          fixturesList.appendChild(li);
+        });
+      })
+      .catch(err => {
+        console.error("Error fetching fixtures:", err);
+        fixturesList.innerHTML = "<li>Unable to load fixtures at this time.</li>";
+      });
+  });
+}
+  
